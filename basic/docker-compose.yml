@@ -6,6 +6,5 @@ services:
     build: ./web
     ports:
       - "8000:8000"
-    command: /usr/local/bin/gunicorn -b :8000 manage:app
-    env_file:
-      - /home/apps/test/.env
+    command: /usr/local/bin/gunicorn -b :8000 wsgi:app
+

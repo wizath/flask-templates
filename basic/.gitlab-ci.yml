@@ -7,7 +7,7 @@ variables:
 test:
   script:
     - docker-compose build $APP_CONTAINER
-    - docker-compose run --rm $APP_CONTAINER python manage.py test
+    - docker-compose run --rm $APP_CONTAINER flask test
   except:
     - master
 
