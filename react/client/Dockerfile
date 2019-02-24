@@ -6,6 +6,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 
+ARG REACT_APP_API_URL
+
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm install
 RUN npm run build
